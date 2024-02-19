@@ -6,16 +6,16 @@ import emailjs from '@emailjs/browser';
 
 
 const Contacts = () => {
-  const handleCopyClick = (phoneNumber, event) => {
-    event.preventDefault(); // Prevent the default behavior of the anchor link
-    navigator.clipboard.writeText(phoneNumber)
-      .then(() => {
-        console.log('Phone number copied to clipboard');
-      })
-      .catch((error) => {
-        console.error('Unable to copy phone number to clipboard', error);
-      });
-  };
+  // const handleCopyClick = (phoneNumber, event) => {
+  //   event.preventDefault(); // Prevent the default behavior of the anchor link
+  //   navigator.clipboard.writeText(phoneNumber)
+  //     .then(() => {
+  //       console.log('Phone number copied to clipboard');
+  //     })
+  //     .catch((error) => {
+  //       console.error('Unable to copy phone number to clipboard', error);
+  //     });
+  // };
   
 
   const form = useRef();
@@ -53,7 +53,7 @@ const Contacts = () => {
             <IoCall className='contact__option-icon' />
             <h4>My Phone</h4>
             <h5>081-913-9936</h5>
-            <a href="#" onClick={(e) => handleCopyClick('081-913-9936', e)}><FaCopy className='copy-icon' /></a>
+            {/* <a href="#" onClick={(e) => handleCopyClick('081-913-9936', e)}><FaCopy className='copy-icon' /></a> */}
           </article>
         </div>
       </div>
