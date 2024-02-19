@@ -72,6 +72,30 @@ const Experience = () => {
                   <h4>Next.js</h4>
                 </div>
               </article>
+              <article className='experience__details'>
+                <BsFillPatchCheckFill className='experience__details-icon'/>
+                <div>
+                  <h4>React</h4>
+                </div>
+              </article>
+              <article className='experience__details'>
+                <BsFillPatchCheckFill className='experience__details-icon'/>
+                <div>
+                  <h4>Java</h4>
+                </div>
+              </article>
+              <article className='experience__details'>
+                <BsFillPatchCheckFill className='experience__details-icon'/>
+                <div>
+                  <h4>Power BI</h4>
+                </div>
+              </article>
+              <article className='experience__details'>
+                <BsFillPatchCheckFill className='experience__details-icon'/>
+                <div>
+                  <h4>Microsoft Azure</h4>
+                </div>
+              </article>
             </div>
         </div>
       </div>

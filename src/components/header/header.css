@@ -53,7 +53,14 @@ header{
   margin-top: 4rem;
   overflow: hidden;
   border: 3px  /* Add border for frame */
+  
 }
+/* Add this at the end of your CSS file */
+.header-scrolled {
+    transform: translateY(20px); /* Adjust the value as needed */
+    transition: transform 0.3s ease-in-out; /* Adjust the transition duration and easing as needed */
+  }
+  
 
 .me > img{
 
@@ -85,20 +92,29 @@ header{
 
 /* Media queries for small devices(Mobiles) */
 
+/* Media queries for small devices(Mobiles) */
 @media screen and (max-width: 600px) {
 
-    header{
-
+    header {
         height: 100vh;
+        padding-top: 4rem; /* Adjust padding for better spacing */
     }
 
-    .header__socials, .scroll__down{
-
+    .header__socials, .scroll__down {
         display: none;
     }
 
-    .me > img{
+    .me {
+        width: 80%; /* Adjust the width as needed for smaller screens */
+        height: auto; /* Allow the height to adjust proportionally */
+        max-width: 300px; /* Set a maximum width to control size on smaller screens */
+        position: static; /* Adjust position to fit in the document flow */
+        margin: 2.5rem auto; /* Center the image with some margin */
+        border-radius: 1rem; /* Adjust border radius */
+    }
 
-        margin-top: 2.5rem;
+    .me > img {
+        width: 100%; /* Make sure the image takes up the full width of its container */
+        margin: 0; /* Remove margin for the image */
     }
 }

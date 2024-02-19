@@ -1,6 +1,6 @@
 nav{
 
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(black);
     width: max-content; /*get the width of it's content*/
     display: block;
     padding: 0.7rem 1.7rem;
