@@ -3,6 +3,10 @@ import './contacts.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { IoCall } from 'react-icons/io5';
 import emailjs from '@emailjs/browser';
+import Clipboard from 'react-clipboard.js';
+import { FaCopy } from "react-icons/fa";
+
+
 
 
 const Contacts = () => {
@@ -53,7 +57,8 @@ const Contacts = () => {
             <IoCall className='contact__option-icon' />
             <h4>My Phone</h4>
             <h5>081-913-9936</h5>
-            {/* <a href="#" onClick={(e) => handleCopyClick('081-913-9936', e)}><FaCopy className='copy-icon' /></a> */}
+            <Clipboard component="a" button-href="#Contacts" data-clipboard-text="0819139936">
+            <FaCopy className='copy-icon' /></Clipboard>
           </article>
         </div>
       </div>
