@@ -19,8 +19,8 @@ const Myprojects = () => {
             <h3>Sek Loso FC</h3>
             <small className='text-light'>ReactJs</small>
             <div className="portfolio__item-cta">
-              <a href="https://github.com/himani413/FashionGallery" target="_blank" rel='noreferrer' className='btn'>Github</a>
-              <a href="https://65d38f4242b0a50dd04a56d0--friendly-sopapillas-722182.netlify.app/" target="_blank" rel='noreferrer' className='btn btn-primary'>Visit Website</a>  
+              <a href="https://github.com/ThapananKulab/app-quiz.git" target="_blank" rel='noreferrer' className='btn'>Github</a>
+              <a href="https://blue-grass-060baba10.4.azurestaticapps.net" target="_blank" rel='noreferrer' className='btn btn-primary'>Visit Website</a>  
             </div>
               
         </article>
