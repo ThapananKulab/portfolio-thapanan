@@ -29,7 +29,7 @@ const Myprojects = () => {
                 <img src={IMG2} alt="" />
             </div>
             <h3>Rent Book</h3>
-            <small className='text-light'>HTML | CSS | JS | php | MySQL</small>
+            <small className='text-light'>HTML | CSS | JS | PHP | MySQL</small>
             <div className="portfolio__item-cta">
               <a href="#" target="_blank" rel='noreferrer' className='btn'>Github</a>  
             </div>

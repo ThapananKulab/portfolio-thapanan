@@ -2,7 +2,6 @@ import React from 'react'
 import './about.css'
 import {GiGraduateCap} from 'react-icons/gi'
 import {BsBookmarkStar} from 'react-icons/bs'
-import {TfiWorld} from 'react-icons/tfi'
 import port3 from '../../assets/port3.png'
 import { FcIdea } from "react-icons/fc";
 
@@ -50,8 +49,8 @@ const About = () => {
 
             </div>
             <p>
-                    I'm a <b>Software Engineering Undergradute</b> at the University of Kelaniya. 
-                    I'm an enthusiastic and driven Software Engineering student seeking a challenging internship opportunity to apply 
+                    I'm a <b> Student </b> at King Mongkut's University of Technology North Bangkok
+                    I'm an seeking a challenging internship opportunity to apply 
                     and expand my technical skills. 
                     With a strong academic foundation in software engineering and hands-on experience in various programming languages,
                     I am eager to contribute to innovative projects and learn from experienced professionals in the industry. I am a quick learner who is always ready to face challenges.

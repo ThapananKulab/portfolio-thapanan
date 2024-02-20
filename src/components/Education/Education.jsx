@@ -45,7 +45,7 @@ const Contacts = () => {
           <article className='contact__option'>
           <img src="https://www.atc.ac.th/wp-content/uploads/2019/03/cropped-logo_atc.png" alt="ATC Logo" className="contact__option-image" /> 
           <br></br> 
-            <h3>Attawit Commercial Technology College</h3>
+            <h3><b>Attawit Commercial Technology College</b></h3>
             <h3>(ATC)</h3>
             <br></br> 
             <h4>Information Technology </h4>
@@ -56,7 +56,7 @@ const Contacts = () => {
           <article className='contact__option'>
           <img src="https://www.jgsee.kmutt.ac.th/v3/wp-content/uploads/2019/10/logo2.png" alt="ATC Logo" className="contact__option-image" /> 
             <br></br> 
-            <h3>King Mongkut's University of Technology North Bangkok (KMUTNB)</h3>
+            <h3><b>King Mongkut's University of Technology North Bangkok (KMUTNB)</b></h3>
             <br></br> 
             <h4>Electronics and Computer Technology</h4>
             <h5>2022 - Now</h5>
