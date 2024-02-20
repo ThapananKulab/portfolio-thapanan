@@ -4,6 +4,8 @@ import {GiGraduateCap} from 'react-icons/gi'
 import {BsBookmarkStar} from 'react-icons/bs'
 import {TfiWorld} from 'react-icons/tfi'
 import port3 from '../../assets/port3.png'
+import { FcIdea } from "react-icons/fc";
+
 
 const About = () => {
   return (
@@ -22,8 +24,8 @@ const About = () => {
 
               <article className='about__card'>
                   <GiGraduateCap className='about__icon'/>
-                  <h5>Degree</h5>
-                  <small>Bsc.(Hons) Software Engneering(UG) <br /><i>University of Kelaniya.</i></small>
+                  <h5>Bachelor's degree</h5>
+                  <small>Electronics Computer <br /><i>King Mongkut's University of Technology North Bangkok (KMUTNB)</i></small>
               </article>
 
               <article className='about__card'>
@@ -33,12 +35,13 @@ const About = () => {
               </article>
 
               <article className='about__card'>
-                  <TfiWorld className='about__icon'/>
-                  <h5>Domains</h5>
+                  <FcIdea className='about__icon'/>
+                  <h5>Interests</h5>
                   <small>
                     <ul>
-                      <li>Net Centric</li>
-                      <li>Mobile Applications</li>
+                      <li>Software Engineer</li>
+                      <li>Full Stack Developer</li>
+                      <li>Data Engineer</li>
                     </ul>
                   </small>
               </article>
