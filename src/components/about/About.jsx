@@ -49,11 +49,12 @@ const About = () => {
 
             </div>
             <p>
-                    I'm a <b> Student </b> at King Mongkut's University of Technology North Bangkok
-                    I'm an seeking a challenging internship opportunity to apply 
-                    and expand my technical skills. 
-                    With a strong academic foundation in software engineering and hands-on experience in various programming languages,
-                    I am eager to contribute to innovative projects and learn from experienced professionals in the industry. I am a quick learner who is always ready to face challenges.
+                    I'm a <b> student </b> at King Mongkut's University of Technology, North Bangkok.
+                    I'm seeking a challenging internship opportunity to apply
+                    and expand my technical skills.
+                    With a strong academic foundation in programming skills and hands-on experience in various programming languages,
+                    I am eager to contribute to innovative projects and learn from experienced professionals in the industry. I am a quick learner and diligent.
+
                     
             </p>
 
