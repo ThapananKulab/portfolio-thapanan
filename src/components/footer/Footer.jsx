@@ -11,13 +11,15 @@ const Footer = () => {
         <ul className="permalinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#educations">Educations</a></li>
             <li><a href="#experience">My Skills</a></li>
             <li><a href="#myprojects">My Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
         </ul>
 
         <div className="footer__socials">
           <a href="https://www.instagram.com/h2ohight/"><FaInstagram /></a>
-          <a href="https://github.com/Thakshila-Bandara"><BsGithub/></a>
+          <a href="https://github.com/ThapananKulab"><BsGithub/></a>
           <a href="https://web.facebook.com/THA.98NIX/"><FaFacebookF /></a>
         </div>
 

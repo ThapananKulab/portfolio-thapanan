@@ -16,21 +16,22 @@
 
 .experience__container > div {
     background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
+    padding: 2.4rem;
+    border-radius: 1rem; /* Adjusted border-radius for a softer look */
     border: 1px solid transparent;
-    transition: var(--transition);
+    transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+    box-shadow: 0 0 20px rgba(78, 148, 206, 0.5); /* Sci-fi themed box shadow */
 }
 
 .experience__container > div:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent background on hover */
+    border-color: var(--color-primary-variant) !important;
+    cursor: pointer; /* Change cursor to indicate interactivity */
 }
 
 .experience__container > div h3 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Adjusted margin for a cleaner look */
     color: var(--color-primary);
 }
 
@@ -76,18 +77,19 @@
 
     .experience__container > div {
         width: 100%;
-        padding: 2rem 1rem;
+        padding: 1.5rem; /* Adjusted padding for smaller screens */
     }
 }
 
 /* Media queries for Samsung devices */
 @media screen and (max-width: 480px) {
     .experience__container > div {
-        padding: 1.5rem; /* Adjust padding for smaller screens */
+        padding: 1.5rem !important; /* Adjust padding for smaller screens */
     }
 }
+
 @media screen and (max-width: 360px) {
     .experience__container > div {
-        padding: 1.5rem; /* Adjust padding for smaller screens */
+        padding: 1.5rem !important; /* Adjust padding for smaller screens */
     }
 }
