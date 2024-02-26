@@ -86,3 +86,8 @@
         padding: 1.5rem; /* Adjust padding for smaller screens */
     }
 }
+@media screen and (max-width: 360px) {
+    .experience__container > div {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+}
