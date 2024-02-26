@@ -128,3 +128,39 @@
         margin: 1.5rem 0;
     }
 }
+/* Media queries for small devices(Mobiles) */
+@media screen and (max-width: 600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+}
+
+/* Media queries for Samsung devices */
+@media screen and (max-width: 480px) {
+    /* Adjust styles specifically for Samsung devices */
+    .about__me {
+        width: 80%;
+        margin: 0 auto 2rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Add more specific styling for Samsung devices as needed */
+}

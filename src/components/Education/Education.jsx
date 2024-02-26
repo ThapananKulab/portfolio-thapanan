@@ -9,7 +9,7 @@ import { FaCopy } from "react-icons/fa";
 
 
 
-const Contacts = () => {
+const Educations = () => {
   //   event.preventDefault(); // Prevent the default behavior of the anchor link
   //   navigator.clipboard.writeText(phoneNumber)
   //     .then(() => {
@@ -38,7 +38,7 @@ const Contacts = () => {
   };
 
   return (
-    <section id='contacts'>
+    <section id='educations'>
       <h2>EDUCATION</h2>
       <div className='container contact__container'>
         <div className='contact__options'>
@@ -67,4 +67,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Educations;

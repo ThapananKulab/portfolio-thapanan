@@ -1,82 +1,87 @@
 /* Your existing CSS rules */
 
+/* Sci-fi theme colors */
+:root {
+    --color-primary-variant: #10141b;  /* Dark background */
+    --color-accent: #00c6ff;          /* Accent color for sci-fi vibe */
+    --color-text: #ffffff;            /* Text color */
+}
+
 footer {
     background: var(--color-primary-variant);
     padding: 3rem 0;
     text-align: center;
     font-size: 0.9rem;
     margin-top: 7rem;
+    border-top: 1px solid var(--color-accent); /* Futuristic border */
 }
 
 footer a {
-    color: var(--color-bg);
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 .footer__logo {
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     display: inline-block;
+    color: var(--color-accent); /* Accent color for logo */
 }
 
 .permalinks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin: 0 auto 3rem;
+    gap: 1.5rem;
+    margin: 0 auto 2rem;
 }
 
 .footer__socials {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .footer__socials a {
-    background: var(--color-bg);
-    color: var(--color-white);
+    background: var(--color-accent);
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
     padding: 0.8rem;
     border-radius: 0.7rem;
     display: flex;
     border: 1px solid transparent;
+    transition: background 0.3s ease-in-out;
 }
 
 .footer__socials a:hover {
     background: transparent;
-    color: var(--color-bg);
-    border-color: var(--color-bg);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .footer__copyright {
-    margin-bottom: 4rem;
-    color: var(--color-bg);
+    margin-bottom: 2rem;
+    color: var(--color-text);
 }
 
 /* Media queries for small devices (Mobiles) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
+    footer {
+        padding: 2rem 0;
+        font-size: 0.8rem;
+        margin-top: 4rem; /* Adjusted margin */
+    }
+
     .permalinks {
-        flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .footer__socials {
-        margin-bottom: 2.6rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    footer {
-        padding: 1.5rem 0;
-    }
-}
-@media screen and (max-width: 600px) {
-    footer {
-        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .footer__logo {
         font-size: 1.5rem;
     }
 }
-

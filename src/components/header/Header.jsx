@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './header.css'
 import CTA from './CTA'
-import port from '../../assets/port2.png'
+import port from '../../assets/port3.png'
 import HeaderSocials from './HeaderSocials'
 
 const Home = () => {
@@ -33,6 +33,7 @@ const Home = () => {
       <div className="container header__container">
         <h5>Hello</h5>
         <h1>{typedText}</h1>
+        <h2>Software Engineer</h2>
         <CTA />
         <HeaderSocials />
         <div className="me">

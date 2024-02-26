@@ -2,7 +2,7 @@ import React from 'react'
 import './about.css'
 import {GiGraduateCap} from 'react-icons/gi'
 import {BsBookmarkStar} from 'react-icons/bs'
-import port3 from '../../assets/port3.png'
+import port4 from '../../assets/port4.png'
 import { FcIdea } from "react-icons/fc";
 
 
@@ -14,7 +14,7 @@ const About = () => {
       <div className="container about__container">
           <div className="about__me">
             <div className="about__me-image">
-                <img src={port3} alt="Me" />
+                <img src={port4} alt="Me" />
             </div>
           </div>
 

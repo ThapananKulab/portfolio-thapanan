@@ -1,8 +1,8 @@
 import React from 'react'
 import './footer.css'
-import {BsLinkedin} from 'react-icons/bs'
+import { FaInstagram } from "react-icons/fa";
 import {BsGithub} from 'react-icons/bs'
-import {BsMedium} from 'react-icons/bs'
+import { FaFacebookF } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -16,9 +16,9 @@ const Footer = () => {
         </ul>
 
         <div className="footer__socials">
-          <a href="https://www.linkedin.com/in/thakshila-bandara-2791b9214"><BsLinkedin/></a>
+          <a href="https://www.instagram.com/h2ohight/"><FaInstagram /></a>
           <a href="https://github.com/Thakshila-Bandara"><BsGithub/></a>
-          <a href="https://medium.com/@thakshiladb2000"><BsMedium/></a>
+          <a href="https://web.facebook.com/THA.98NIX/"><FaFacebookF /></a>
         </div>
 
         <div className="footer__copyright">
