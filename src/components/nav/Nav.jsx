@@ -7,6 +7,8 @@ import {FaLaptopCode} from 'react-icons/fa'
 import {GoChecklist} from 'react-icons/go'
 import {BiMessageSquareDetail} from 'react-icons/bi'
 import { useState } from 'react'
+import { RiHome6Fill } from "react-icons/ri";
+
 
 
 
@@ -18,7 +20,7 @@ const Nav = () => {
     
     <nav>
       
-       <a href="#home" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active': ''}><AiOutlineHome/></a>
+       <a href="#home" onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active': ''}><RiHome6Fill /></a>
        <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active': ''}><BiUser/></a>
        <a href="#educations" onClick={() => setActiveNav('#educations')} className={activeNav === '#educations' ? 'active': ''}><FaAddressBook /></a>
        <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active': ''}><FaLaptopCode/></a>
