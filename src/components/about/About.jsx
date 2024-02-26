@@ -27,11 +27,11 @@ const About = () => {
                   <small>Electronics Computer <br /><i>King Mongkut's University of Technology North Bangkok (KMUTNB)</i></small>
               </article>
 
-              <article className='about__card'>
+              {/* <article className='about__card'>
                   <BsBookmarkStar className='about__icon'/>
                   <h5>Current GPA</h5>
                   <small></small>
-              </article>
+              </article> */}
 
               <article className='about__card'>
                   <FcIdea className='about__icon'/>
