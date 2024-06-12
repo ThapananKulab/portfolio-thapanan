@@ -40,14 +40,6 @@ const Header = () => (
           >
             Home
           </Link>
-
-          <Link
-            to="/experience"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-          >
-            Experience
-          </Link>
           <Link
             to="/about"
             className="btn btn-ghost text-md"
@@ -55,6 +47,22 @@ const Header = () => (
             activeClassName="active"
           >
             About
+          </Link>
+          <Link
+            to="/experience"
+            className="btn btn-ghost text-md"
+            style={{ color: "black" }}
+          >
+            Experience
+          </Link>
+
+          <Link
+            to="/contact"
+            className="btn btn-ghost text-md"
+            style={{ color: "black" }}
+            activeClassName="active"
+          >
+            Contact
           </Link>
         </div>
       </div>
