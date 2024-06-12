@@ -1,6 +1,8 @@
 import React from "react"
 import Navbar from "../components/header"
 
+import Seo from "../components/seo"
+
 const Index = () => {
   return (
     <div>
@@ -123,5 +125,7 @@ const Index = () => {
     </div>
   )
 }
+
+export const Head = () => <Seo title="Home | Thapanan Kulab" />
 
 export default Index
