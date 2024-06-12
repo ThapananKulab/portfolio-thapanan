@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Navbar from "./index"
+import Navbar from "../components/header"
 
 const NotFoundPage = () => {
   return (
