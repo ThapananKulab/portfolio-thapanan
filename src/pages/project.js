@@ -17,31 +17,44 @@ const NotFoundPage = () => {
       >
         <div className="card card-compact w-96 bg-base-100 shadow-xl mr-5 ml-5">
           <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
+            <img src="" />
           </figure>
           <div className="card-body ">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <h2 className="card-title">App Quiz Sek Loso</h2>
+            <p>เพลงพี่เสก</p>
+            <div className="card-actions justify-center">
+              <a
+                href="https://github.com/ThapananKulab/app-quiz-sek-loso"
+                target="_blank"
+              >
+                <button className="btn btn-outline btn-dark">Github</button>
+              </a>
+              <a
+                href="https://main--sekloso-quiz-song.netlify.app/"
+                target="_blank"
+              >
+                <button className="btn btn-primary">View</button>
+              </a>
             </div>
           </div>
         </div>
         <div className="card card-compact w-96 bg-base-100 shadow-xl mr-5">
           <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
+            <img src="" />
           </figure>
           <div className="card-body ">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <h2 className="card-title">Cafe</h2>
+            <p>ใช้ React</p>
+            <div className="card-actions justify-center">
+              <a
+                href="https://github.com/ThapananKulab/portfolio-thapanan-gatsby"
+                target="_blank"
+              >
+                <button className="btn btn-outline btn-dark">Github</button>
+              </a>
+              <a href="https://pos-management-cafe.netlify.app" target="_blank">
+                <button className="btn btn-primary">View</button>
+              </a>
             </div>
           </div>
         </div>
