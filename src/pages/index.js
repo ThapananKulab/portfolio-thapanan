@@ -7,14 +7,7 @@ const Index = () => {
   return (
     <div>
       <Navbar />
-      <div
-        className="container "
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></div>
+
       <div
         className="container"
         style={{

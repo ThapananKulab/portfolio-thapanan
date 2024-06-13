@@ -49,11 +49,11 @@ const Header = () => (
             About
           </Link>
           <Link
-            to="/experience"
+            to="/project"
             className="btn btn-ghost text-md"
             style={{ color: "black" }}
           >
-            Experience
+            Project
           </Link>
 
           <Link
