@@ -11,7 +11,9 @@ const Header = () => (
             style={{ height: "40px", width: "auto", marginRight: "8px" }}
             alt="Cristiano Ronaldo Logo"
           />
-          <a className="btn btn-ghost text-base">Cristiano Ronaldo</a>
+          <Link to="/" className="btn btn-ghost text-base">
+            Cristiano Ronaldo
+          </Link>
         </div>
 
         <div className="lg:hidden flex">
@@ -41,12 +43,12 @@ const Header = () => (
             Home
           </Link>
           <Link
-            to="/about"
+            to="/education"
             className="btn btn-ghost text-md"
             style={{ color: "black" }}
             activeClassName="active"
           >
-            About
+            Education
           </Link>
           <Link
             to="/project"

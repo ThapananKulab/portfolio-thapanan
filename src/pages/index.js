@@ -53,7 +53,7 @@ const Index = () => {
                 </tbody>
               </table>
             </div>
-            <div className="chat chat-start ">
+            <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-10 rounded-full">
                   <img
@@ -107,10 +107,10 @@ const Index = () => {
               second or paternal family name is Aveiro.
             </p>
             <button
-              className="btn btn-primary "
+              className="btn btn-primary"
               onClick={() => document.getElementById("my_modal_2").showModal()}
             >
-              Get Started
+              เรียกดูเพิ่มเติม
             </button>
           </div>
         </div>

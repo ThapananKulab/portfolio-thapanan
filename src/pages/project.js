@@ -63,6 +63,6 @@ const NotFoundPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Expeirence | Thapanan Kulab" />
+export const Head = () => <Seo title="Project | Thapanan Kulab" />
 
 export default NotFoundPage
