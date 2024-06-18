@@ -66,6 +66,14 @@ const Header = () => (
           >
             Contact
           </Link>
+          <Link
+            to="/map"
+            className="btn btn-ghost text-md"
+            style={{ color: "black" }}
+            activeClassName="active"
+          >
+            Map
+          </Link>
         </div>
       </div>
     </div>
