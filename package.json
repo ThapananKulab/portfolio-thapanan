@@ -12,6 +12,7 @@
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.1.3",
