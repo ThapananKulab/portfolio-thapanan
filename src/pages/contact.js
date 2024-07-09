@@ -5,12 +5,6 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Seo from "../components/seo"
 
-// Import styles for Leaflet
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
-import "leaflet/dist/leaflet.css"
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"
-import "leaflet-defaulticon-compatibility"
-
 const ContactForm = () => {
   const mapRef = useRef()
   const email = "thapanan.kularb@gmail.com"
@@ -98,23 +92,10 @@ const ContactForm = () => {
               </div>
               {isClient && (
                 <div style={{ width: "100%", height: "500px" }}>
-                  <MapContainer
-                    center={[13.811202, 100.504995]} // Center position of the map
-                    zoom={13}
-                    scrollWheelZoom={false}
-                    style={{ height: "100%", width: "100%" }}
-                    ref={mapRef}
-                  >
-                    <TileLayer
-                      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <Marker position={[13.811202, 100.504995]}>
-                      <Popup>
-                        ตำแหน่งที่ต้องการปักหมุด <br /> [13.811387, 100.505121]
-                      </Popup>
-                    </Marker>
-                  </MapContainer>
+                  {/* Dynamically import Leaflet components */}
+                  {typeof window !== "undefined" && (
+                    <DynamicMap mapRef={mapRef} />
+                  )}
                 </div>
               )}
             </div>
@@ -125,6 +106,28 @@ const ContactForm = () => {
   )
 }
 
-export const Head = () => <Seo title="Contact | Thapanan Kulab" />
+const DynamicMap = ({ mapRef }) => {
+  const { MapContainer, TileLayer, Marker, Popup } = require("react-leaflet")
+  return (
+    <MapContainer
+      center={[13.811202, 100.504995]} // Center position of the map
+      zoom={13}
+      scrollWheelZoom={false}
+      style={{ height: "100%", width: "100%" }}
+      ref={mapRef}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={[13.811202, 100.504995]}>
+        <Popup>
+          ตำแหน่งที่ต้องการปักหมุด <br /> [13.811387, 100.505121]
+        </Popup>
+      </Marker>
+    </MapContainer>
+  )
+}
 
+export const Head = () => <Seo title="Contact | Thapanan Kulab" />
 export default ContactForm
