@@ -5,16 +5,18 @@ import Seo from "../components/seo"
 
 const educationData = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "Example University",
-    year: "2020",
-    details: "Graduated with honors, specialized in software development.",
+    degree: "King Mongkut's University of Technology North Bangkok",
+    institution: "Bachelor of Industrial Technology",
+    year: "2022-2024",
+    details:
+      "The focus is on enabling learners to design and apply computer engineering knowledge in both hardware and software.",
   },
   {
-    degree: "Master of Science in Data Science",
-    institution: "Sample Institute",
-    year: "2022",
-    details: "Research focused on machine learning and big data.",
+    degree: "Attawit Commercial Technology College",
+    institution: "High Vocational Certificate",
+    year: "2020-2022",
+    details:
+      "Basics of software development, operating systems, and application software",
   },
 ]
 

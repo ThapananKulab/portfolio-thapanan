@@ -1,96 +1,85 @@
 import React, { useState } from "react"
+import { FaCopy, FaEnvelope } from "react-icons/fa"
 import Navbar from "../components/header"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
+  const email = "thapanan.kularb@gmail.com"
+  const phone = "0819139936"
 
-  const handleChange = e => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log(formData)
-    setFormData({ name: "", email: "", message: "" })
+  const copyToClipboard = (text, type) => {
+    navigator.clipboard.writeText(text)
+    toast.success(`Copied ${text} to clipboard!`, {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
   }
 
   return (
     <div>
+      <ToastContainer />
       <Navbar />
       <div
         className="container"
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="input input-bordered flex items-center gap-2 w-full"
-              placeholder="Your Name"
-              required
-            />
+        <div className="min-h-screen bg-gray-100 p-6">
+          <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-bold text-center mb-10">Contact</h1>
+            <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-8">
+              <div className="mb-4 relative">
+                <label
+                  htmlFor="phone"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Phone
+                </label>
+                <div className="flex items-center">
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    className="input input-bordered flex-grow"
+                    value={phone}
+                    readOnly
+                  />
+                  <FaCopy
+                    className="ml-2 cursor-pointer text-gray-700"
+                    onClick={() => copyToClipboard(phone, "phone")}
+                  />
+                </div>
+              </div>
+              <div className="mb-4 relative">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Email
+                </label>
+                <div className="flex items-center">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="input input-bordered flex-grow"
+                    value={email}
+                    readOnly
+                  />
+
+                  <a href={`mailto:${email}`} className="ml-2">
+                    <FaEnvelope className="text-gray-700 hover:text-blue-500" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="input input-bordered flex items-center gap-2 w-full"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="input input-bordered flex items-center gap-2 w-full px-4 py-3"
-              rows="5"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-primary container"
-            style={{ textAlign: "center", display: "flex" }}
-          >
-            Send
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   )

@@ -1,83 +1,139 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Header = () => (
-  <nav className="bg-white-800 p-4">
-    <div className="flex-1">
-      <div className="container mx-auto flex justify-between items-center">
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src="https://logowik.com/content/uploads/images/cristiano-ronaldo-cr712464.logowik.com.webp"
-            style={{ height: "40px", width: "auto", marginRight: "8px" }}
-            alt="Cristiano Ronaldo Logo"
-          />
-          <Link to="/" className="btn btn-ghost text-base">
-            Cristiano Ronaldo
-          </Link>
-        </div>
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
-        <div className="lg:hidden flex">
-          <button className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <nav className="p-4">
+      <div className="flex-1">
+        <div className="container mx-auto flex justify-between items-center">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Link
+              to="/"
+              className="btn btn-ghost font-bold tracking-wide hover:text-gray-700 transition-colors duration-300"
             >
-              <title>Menu</title>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2z"
-              />
-            </svg>
-          </button>
+              THAPANAN KULAB
+            </Link>
+          </div>
+
+          {/* Hamburger button for mobile */}
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} className="p-2">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Desktop menu */}
+          <div className="hidden lg:flex space-x-4 text-black ml-200">
+            <NavLinks />
+          </div>
         </div>
 
-        <div className="hidden lg:flex space-x-4 text-white ml-200">
-          <Link
-            to="/"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-            activeClassName="active"
-          >
-            Home
-          </Link>
-          <Link
-            to="/education"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-            activeClassName="active"
-          >
-            Education
-          </Link>
-          <Link
-            to="/project"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-          >
-            Project
-          </Link>
-
-          <Link
-            to="/contact"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-            activeClassName="active"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/map"
-            className="btn btn-ghost text-md"
-            style={{ color: "black" }}
-            activeClassName="active"
-          >
-            Map
-          </Link>
+        {/* Mobile menu */}
+        <div className={`lg:hidden ${isMenuOpen ? "block" : "hidden"} mt-4 `}>
+          <NavLinks2 />
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  )
+}
+
+const NavLinks = () => (
+  <>
+    <Link
+      to="/"
+      className="btn btn-ghost text-md "
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Home
+    </Link>
+    <Link
+      to="/education"
+      className="btn btn-ghost text-md "
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Education
+    </Link>
+    <Link
+      to="/project"
+      className="btn btn-ghost text-md "
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Project
+    </Link>
+    <Link
+      to="/experience"
+      className="btn btn-ghost text-md "
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Experience
+    </Link>
+    <Link
+      to="/contact"
+      className="btn btn-ghost text-md"
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Contact
+    </Link>
+  </>
+)
+
+const NavLinks2 = () => (
+  <>
+    <Link
+      to="/"
+      className="btn btn-ghost text-md block py-2"
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Home
+    </Link>
+    <Link
+      to="/education"
+      className="btn btn-ghost text-md block py-2"
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Education
+    </Link>
+    <Link
+      to="/project"
+      className="btn btn-ghost text-md block py-2"
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Project
+    </Link>
+    <Link
+      to="/experience"
+      className="btn btn-ghost text-md block py-2"
+      activeClassName="font-bold text-primary bg-white-800 rounded"
+    >
+      Experience
+    </Link>
+    <Link
+      to="/contact"
+      className="btn btn-ghost text-md block py-2"
+      activeClassName="font-bold text-black bg-white-800 rounded"
+    >
+      Contact
+    </Link>
+  </>
 )
 
 export default Header
