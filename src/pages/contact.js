@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React from "react"
 import { FaCopy, FaEnvelope } from "react-icons/fa"
 import Navbar from "../components/header"
 import { ToastContainer, toast } from "react-toastify"
@@ -6,16 +6,10 @@ import "react-toastify/dist/ReactToastify.css"
 import Seo from "../components/seo"
 
 const ContactForm = () => {
-  const mapRef = useRef()
   const email = "thapanan.kularb@gmail.com"
   const phone = "0819139936"
-  const [isClient, setIsClient] = useState(false)
 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
-  const copyToClipboard = text => {
+  const copyToClipboard = (text, type) => {
     navigator.clipboard.writeText(text)
     toast.success(`Copied ${text} to clipboard!`, {
       position: "top-center",
@@ -27,13 +21,6 @@ const ContactForm = () => {
       progress: undefined,
     })
   }
-
-  useEffect(() => {
-    if (mapRef.current) {
-      const mapInstance = mapRef.current
-      mapInstance.invalidateSize()
-    }
-  }, [])
 
   return (
     <div>
@@ -65,7 +52,7 @@ const ContactForm = () => {
                   />
                   <FaCopy
                     className="ml-2 cursor-pointer text-gray-700"
-                    onClick={() => copyToClipboard(phone)}
+                    onClick={() => copyToClipboard(phone, "phone")}
                   />
                 </div>
               </div>
@@ -85,19 +72,12 @@ const ContactForm = () => {
                     value={email}
                     readOnly
                   />
+
                   <a href={`mailto:${email}`} className="ml-2">
                     <FaEnvelope className="text-gray-700 hover:text-blue-500" />
                   </a>
                 </div>
               </div>
-              {isClient && (
-                <div style={{ width: "100%", height: "500px" }}>
-                  {/* Dynamically import Leaflet components */}
-                  {typeof window !== "undefined" && (
-                    <DynamicMap mapRef={mapRef} />
-                  )}
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -105,29 +85,5 @@ const ContactForm = () => {
     </div>
   )
 }
-
-const DynamicMap = ({ mapRef }) => {
-  const { MapContainer, TileLayer, Marker, Popup } = require("react-leaflet")
-  return (
-    <MapContainer
-      center={[13.811202, 100.504995]} // Center position of the map
-      zoom={13}
-      scrollWheelZoom={false}
-      style={{ height: "100%", width: "100%" }}
-      ref={mapRef}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={[13.811202, 100.504995]}>
-        <Popup>
-          ตำแหน่งที่ต้องการปักหมุด <br /> [13.811387, 100.505121]
-        </Popup>
-      </Marker>
-    </MapContainer>
-  )
-}
-
 export const Head = () => <Seo title="Contact | Thapanan Kulab" />
 export default ContactForm
