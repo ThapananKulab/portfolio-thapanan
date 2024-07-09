@@ -1,11 +1,35 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { FaCopy, FaEnvelope } from "react-icons/fa"
 import Navbar from "../components/header"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Seo from "../components/seo"
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
+let MapContainer, TileLayer, Marker, Popup
+if (isBrowser) {
+  // Dynamically import react-leaflet components
+  const {
+    MapContainer: LMapContainer,
+    TileLayer: LTileLayer,
+    Marker: LMarker,
+    Popup: LPopup,
+  } = require("react-leaflet")
+  MapContainer = LMapContainer
+  TileLayer = LTileLayer
+  Marker = LMarker
+  Popup = LPopup
+
+  // Import leaflet CSS dynamically
+  require("leaflet/dist/leaflet.css")
+  require("leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css")
+  require("leaflet-defaulticon-compatibility")
+}
+
 const ContactForm = () => {
+  const mapRef = useRef()
   const email = "thapanan.kularb@gmail.com"
   const phone = "0819139936"
 
@@ -21,6 +45,13 @@ const ContactForm = () => {
       progress: undefined,
     })
   }
+
+  useEffect(() => {
+    if (isBrowser && mapRef.current) {
+      const mapInstance = mapRef.current
+      mapInstance.invalidateSize()
+    }
+  }, [])
 
   return (
     <div>
@@ -72,12 +103,32 @@ const ContactForm = () => {
                     value={email}
                     readOnly
                   />
-
                   <a href={`mailto:${email}`} className="ml-2">
                     <FaEnvelope className="text-gray-700 hover:text-blue-500" />
                   </a>
                 </div>
               </div>
+              {isBrowser && (
+                <div style={{ width: "100%", height: "500px" }}>
+                  <MapContainer
+                    center={[13.811202, 100.504995]} // ตำแหน่งศูนย์กลางแผนที่
+                    zoom={13}
+                    scrollWheelZoom={false}
+                    style={{ height: "100%", width: "100%" }}
+                    ref={mapRef}
+                  >
+                    <TileLayer
+                      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={[13.811202, 100.504995]}>
+                      <Popup>
+                        ตำแหน่งที่ต้องการปักหมุด <br /> [13.811387, 100.505121]
+                      </Popup>
+                    </Marker>
+                  </MapContainer>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -85,5 +136,6 @@ const ContactForm = () => {
     </div>
   )
 }
+
 export const Head = () => <Seo title="Contact | Thapanan Kulab" />
 export default ContactForm
