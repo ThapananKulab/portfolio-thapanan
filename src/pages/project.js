@@ -1,30 +1,30 @@
 import * as React from "react"
 import Navbar from "../components/header"
 import Seo from "../components/seo"
+import { FaGithub } from "react-icons/fa"
+import { GrView } from "react-icons/gr"
 
 const projectData = [
   {
-    degree: "Cafe Management System",
-    institution: "Example University",
-    year: "2022-2024",
+    degree: "Coffee Shop Raw Material Management System",
+    tools: "MongoDB, React, Express.js, NodeJS,",
     details: "Graduated with honors, specialized in software development.",
+    github: "",
+    link: "https://pos-management-cafe.netlify.app/sale/pos",
   },
   {
     degree: "Master of Science in Data Science",
-    institution: "Sample Institute",
-    year: "MongoDB, React, NodeJS,",
+    tools: "MongoDB, React, NodeJS,",
     details: "Research focused on machine learning and big data.",
   },
   {
     degree: "Master of Science in Data Science",
-    institution: "Sample Institute",
-    year: "2020-2022",
+    tools: "2020-2022",
     details: "Research focused on machine learning and big data.",
   },
   {
     degree: "Master of Science in Data Science",
-    institution: "Sample Institute",
-    year: "2020-2022",
+    tools: "2020-2022",
     details: "Research focused on machine learning and big data.",
   },
 ]
@@ -42,23 +42,20 @@ const ProjectPage = () => {
               {projectData.map((project, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                   <h2 className="text-2xl font-bold mb-2">{project.degree}</h2>
-                  {/* <p className="text-gray-700">{project.institution}</p> */}
-                  <p className="text-gray-500">Tools: {project.year}</p>
+                  <p className="text-gray-500">Tools: {project.tools}</p>
                   <p className="text-gray-600 mt-4">{project.details}</p>
                   <div className="card-actions justify-center">
-                    <a
-                      href="https://github.com/ThapananKulab/app-quiz-sek-loso"
-                      target="_blank"
-                    >
+                    <a href={project.link} target="_blank">
                       <button className="btn btn-outline btn-dark">
+                        <FaGithub />
                         Github
                       </button>
                     </a>
-                    <a
-                      href="https://main--sekloso-quiz-song.netlify.app/"
-                      target="_blank"
-                    >
-                      <button className="btn btn-primary">View</button>
+                    <a href={project.link} target="_blank">
+                      <button className="btn btn-primary">
+                        <GrView />
+                        View
+                      </button>
                     </a>
                   </div>
                 </div>

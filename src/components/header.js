@@ -1,5 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { IoHome } from "react-icons/io5"
+import { FaGraduationCap } from "react-icons/fa"
+import { GoProject } from "react-icons/go"
+import { MdWork } from "react-icons/md"
+import { FaPhone } from "react-icons/fa6"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -63,6 +68,7 @@ const NavLinks = () => (
       className="btn btn-ghost text-md "
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
+      <IoHome />
       Home
     </Link>
     <Link
@@ -70,13 +76,14 @@ const NavLinks = () => (
       className="btn btn-ghost text-md "
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
-      Education
+      <FaGraduationCap /> Education
     </Link>
     <Link
       to="/project"
       className="btn btn-ghost text-md "
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
+      <GoProject />
       Project
     </Link>
     <Link
@@ -84,6 +91,7 @@ const NavLinks = () => (
       className="btn btn-ghost text-md "
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
+      <MdWork />
       Experience
     </Link>
     <Link
@@ -91,6 +99,7 @@ const NavLinks = () => (
       className="btn btn-ghost text-md"
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
+      <FaPhone />
       Contact
     </Link>
   </>
