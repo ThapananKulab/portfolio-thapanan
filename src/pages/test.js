@@ -42,7 +42,7 @@ const Experience = () => {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg flex flex-col lg:flex-row items-center lg:items-start"
               >
-                <div>
+                <div className="lg:mr-6 mb-4 lg:mb-0">
                   <h2 className="text-2xl font-bold mb-2">{exp.position}</h2>
                   <p className="text-gray-700 font-semibold">{exp.company}</p>
                   <p className="text-gray-500 mb-4">Period: {exp.period}</p>
@@ -54,7 +54,7 @@ const Experience = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="ml-auto mt-10">
+                <div className="ml-auto">
                   <img
                     src={exp.image}
                     alt={exp.company}
