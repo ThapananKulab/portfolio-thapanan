@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from "../components/header"
+import Footer from "../components/footer"
 
 import Seo from "../components/seo"
 
@@ -99,7 +100,8 @@ const Index = () => {
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">User</h1>
+            <h1 className="text-5xl font-bold">Hi !</h1>
+            <h1 className="text-5xl font-bold">My name is Thapanan Kulab</h1>
             <p className="py-6">
               "CR7" redirects here. For other uses, see Cristiano Ronaldo
               (disambiguation) and CR7 (disambiguation). In this Portuguese
@@ -116,6 +118,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
