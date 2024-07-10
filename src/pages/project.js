@@ -10,7 +10,7 @@ const projectData = [
     tools: "MongoDB, React, Express.js, NodeJS,",
     details: "Graduated with honors, specialized in software development.",
     github: "",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWNs7_TqH_iYq6zlZnQcT3XRUjK1cLRT58RQ&s",
+    img: "",
     link: "https://pos-management-cafe.netlify.app/sale/pos",
   },
   {
@@ -18,19 +18,17 @@ const projectData = [
     tools: "MongoDB, React, NodeJS,",
     details:
       "Time entry and exit records: Time records record the time employees come to work and leave the workplace.",
+    github: "https://github.com/ThapananKulab/search-engine-movie.git",
+    img: "",
+    link: "https://ambitious-desert-0548dee10.5.azurestaticapps.net",
+  },
+  {
+    title: "Search Engine Movie With OMDB API",
+    tools: "NextJS, Mantine",
+    details: "Using Search Movie By OMDB API",
     github: "https://github.com/ThapananKulab/work-io-demo.git",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4gVxYgRiRzBCfNkW-JWcz6YxkTrlNao6iQ&s",
-    link: "https://ambitious-desert-0548dee10.5.azurestaticapps.net/",
-  },
-  {
-    title: "Master of Science in Data Science",
-    tools: "2020-2022",
-    details: "Research focused on machine learning and big data.",
-  },
-  {
-    title: "Master of Science in Data Science",
-    tools: "2020-2022",
-    details: "Research focused on machine learning and big data.",
+    img: "",
+    link: "https://search-engine-movie.vercel.app",
   },
 ]
 
