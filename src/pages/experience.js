@@ -7,7 +7,7 @@ const experienceData = [
     position: "Electricity Generating Authority of Thailand (EGAT)",
     company: "Web Developer (Intern)",
     period: "April 2024 - July 2024",
-    image: "https://stacs.io/wp-content/uploads/2022/12/EGAT-1.png", // ลิงก์ไปยังรูปภาพจากภายนอก
+    image: "https://stacs.io/wp-content/uploads/2022/12/EGAT-1.png",
     details: [
       "Developed web applications using React and Node.js",
       "Collaborated with the team to implement new features and improve existing ones",

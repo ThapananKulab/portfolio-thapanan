@@ -49,7 +49,17 @@ const ProjectPage = () => {
                   <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
                   <p className="text-gray-500">Tools: {project.tools}</p>
                   <p className="text-gray-600 mt-4">{project.details}</p>
-
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="full"
+                      style={{
+                        maxWidth: "255px",
+                        maxHeight: "255px",
+                      }}
+                    />
+                  </div>
                   <div className="card-actions justify-center">
                     <a href={project.link} target="_blank">
                       <button className="btn btn-outline btn-dark">
