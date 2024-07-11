@@ -75,10 +75,12 @@ const ContactForm = () => {
                   value={phone}
                   readOnly
                 />
-                <FaCopy
-                  className="ml-2 cursor-pointer hover:text-blue-500 text-gray-700"
-                  onClick={() => copyToClipboard(phone, "phone")}
-                />
+                <div className="ml-2">
+                  <FaCopy
+                    className="text-gray-700 hover:text-blue-500"
+                    onClick={() => copyToClipboard(phone, "phone")}
+                  />
+                </div>
               </div>
             </div>
             <div className="mb-4 relative">
