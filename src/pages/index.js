@@ -16,7 +16,7 @@ import {
   FaJava,
 } from "react-icons/fa"
 
-import { SiFlutter, SiTailwindcss, SiMongodb, SiMysql } from "react-icons/si"
+import { SiFlutter, SiTailwindcss, SiMongodb, SiPhp } from "react-icons/si"
 import { RiNextjsFill } from "react-icons/ri"
 
 const Index = () => {
@@ -73,15 +73,14 @@ const Index = () => {
       icon: <FaGithub className="text-gray-900 text-4xl mx-auto" />,
     },
     {
-      name: "MySQL",
-      icon: <SiMysql className="text-blue-600 text-4xl mx-auto" />,
-    },
-
-    {
-      name: "PHP",
+      name: "Flutter",
       icon: (
         <SiFlutter style={{ color: "#02569B" }} className="text-4xl mx-auto" />
       ),
+    },
+    {
+      name: "PHP",
+      icon: <SiPhp style={{ color: "#474A8A" }} className="text-4xl mx-auto" />,
     },
     {
       name: "Java",

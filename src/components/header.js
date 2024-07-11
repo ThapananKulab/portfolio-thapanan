@@ -69,7 +69,7 @@ const NavLinks = () => (
       activeClassName="font-bold text-primary bg-white-800 rounded"
     >
       <IoHome />
-      Home
+      About me
     </Link>
     <Link
       to="/education"
