@@ -76,7 +76,7 @@ const ContactForm = () => {
                   readOnly
                 />
                 <FaCopy
-                  className="ml-2 cursor-pointer text-gray-700"
+                  className="ml-2 cursor-pointer hover:text-blue-500 text-gray-700"
                   onClick={() => copyToClipboard(phone, "phone")}
                 />
               </div>

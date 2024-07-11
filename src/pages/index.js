@@ -6,6 +6,18 @@ import Footer from "../components/footer"
 import Seo from "../components/seo"
 import Profile from "../images/Profile.jpeg"
 import Modal from "../components/modal-resume"
+import {
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGithub,
+  FaJava,
+} from "react-icons/fa"
+
+import { SiFlutter, SiTailwindcss, SiMongodb, SiMysql } from "react-icons/si"
+import { RiNextjsFill } from "react-icons/ri"
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -20,6 +32,62 @@ const Index = () => {
     setModalImage(null)
     setIsModalOpen(false)
   }
+
+  const skills = [
+    {
+      name: "JavaScript",
+      icon: <FaJs className="text-yellow-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "React",
+      icon: <FaReact className="text-blue-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Next.js",
+      icon: <RiNextjsFill className="text-dark-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Node.js",
+      icon: <FaNodeJs className="text-green-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "MongoDB",
+      icon: <SiMongodb className="text-green-600 text-4xl mx-auto" />,
+    },
+
+    {
+      name: "HTML",
+      icon: <FaHtml5 className="text-orange-600 text-4xl mx-auto" />,
+    },
+    {
+      name: "CSS",
+      icon: <FaCss3Alt className="text-blue-600 text-4xl mx-auto" />,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="text-blue-400 text-4xl mx-auto" />,
+    },
+
+    {
+      name: "GitHub",
+      icon: <FaGithub className="text-gray-900 text-4xl mx-auto" />,
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql className="text-blue-600 text-4xl mx-auto" />,
+    },
+
+    {
+      name: "PHP",
+      icon: (
+        <SiFlutter style={{ color: "#02569B" }} className="text-4xl mx-auto" />
+      ),
+    },
+    {
+      name: "Java",
+      icon: <FaJava className="text-red-500 text-4xl mx-auto" />,
+    }, // Added Java
+  ]
 
   return (
     <div>
@@ -40,12 +108,7 @@ const Index = () => {
                 <span className="text-7xl text-primary">Thapanan Kulab</span>
               </h1>
 
-              <p className="py-6">
-                "CR7" redirects here. For other uses, see Cristiano Ronaldo
-                (disambiguation) and CR7 (disambiguation). In this Portuguese
-                name, the first or maternal family name is dos Santos and the
-                second or paternal family name is Aveiro.
-              </p>
+              <p className="py-6">I want to be Software Engineer</p>
               <div className="card-actions flex justify-center lg:justify-start space-x-2">
                 <button
                   className="btn btn-outline btn-primary text-white"
@@ -58,6 +121,24 @@ const Index = () => {
                   Resume
                 </button>
               </div>
+            </div>
+          </div>
+
+          {/* Skills Section */}
+          <div className="mt-20">
+            <h2 className="text-4xl font-bold text-center mb-6">Skills</h2>
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {skills.map(skill => (
+                <div
+                  key={skill.name}
+                  className="bg-white p-4 rounded-lg shadow-lg text-center"
+                >
+                  <div className="text-center mb-2">{skill.icon}</div>
+                  <p className="text-xl font-medium text-gray-800">
+                    {skill.name}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
