@@ -39,8 +39,15 @@ const projectData = [
     img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720668463/portfolio/pqp3ugwg2bo7nm6tr8ij.png",
     link: "https://sekloso-quiz-song.netlify.app",
   },
+  {
+    title: "Search Map Leaflet",
+    tools: "React(Vite), Tailwind",
+    details: "Search map using leaflet library",
+    github: "https://github.com/ThapananKulab/leaflet-search.git",
+    img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720687760/portfolio/epd1rgelgincci4akitq.png",
+    link: "https://leaflet-search.vercel.app/",
+  },
 ]
-
 const ProjectPage = () => {
   return (
     <div>
