@@ -20,7 +20,7 @@ const projectData = [
     details:
       "Time entry and exit records: Time records record the time employees come to work and leave the workplace.",
     github: "https://github.com/ThapananKulab/work-io-demo.git",
-    img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720667248/portfolio/rnaoj2csde0ifxvqzf1p.png",
+    img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720715687/portfolio/b4uhm8ueptgyukq5lwp8.png",
     link: "https://ambitious-desert-0548dee10.5.azurestaticapps.net",
   },
   {

@@ -15,7 +15,7 @@ const experienceData = [
   },
   {
     position: "Biolab Company Limited",
-    company: "IT Support (Intern) Biolab Company Limited",
+    company: "IT Support (Intern)",
     period: "March 2019 - June 2019",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-uXhN6ZXHpNFe0KvxScEVvwhjDRDsBaO-Pw&s",

@@ -14,10 +14,23 @@ import {
   FaCss3Alt,
   FaGithub,
   FaJava,
+  FaDatabase,
+  FaMobileAlt,
+  FaCloud,
 } from "react-icons/fa"
 
-import { SiFlutter, SiTailwindcss, SiMongodb, SiPhp } from "react-icons/si"
+import {
+  SiFlutter,
+  SiTailwindcss,
+  SiMongodb,
+  SiPhp,
+  SiMui,
+  SiArduino,
+  SiPowerbi,
+} from "react-icons/si"
 import { RiNextjsFill } from "react-icons/ri"
+import { FaCode } from "react-icons/fa6"
+import { MdWeb } from "react-icons/md"
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -33,14 +46,35 @@ const Index = () => {
     setIsModalOpen(false)
   }
 
-  const skills = [
+  const technicalSkills = [
+    {
+      name: "Database Administration",
+      icon: <FaDatabase className="text-purple-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Web Development",
+      icon: <MdWeb className="text-teal-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Programming",
+      icon: <FaCode className="text-indigo-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Cloud Computing",
+      icon: <FaCloud className="text-blue-700 text-4xl mx-auto" />,
+    },
+  ]
+
+  const tools = [
     {
       name: "JavaScript",
       icon: <FaJs className="text-yellow-500 text-4xl mx-auto" />,
     },
     {
       name: "React",
-      icon: <FaReact className="text-blue-500 text-4xl mx-auto" />,
+      icon: (
+        <FaReact style={{ color: "#61DBFB" }} className="text-4xl mx-auto" />
+      ),
     },
     {
       name: "Next.js",
@@ -54,7 +88,6 @@ const Index = () => {
       name: "MongoDB",
       icon: <SiMongodb className="text-green-600 text-4xl mx-auto" />,
     },
-
     {
       name: "HTML",
       icon: <FaHtml5 className="text-orange-600 text-4xl mx-auto" />,
@@ -67,7 +100,6 @@ const Index = () => {
       name: "Tailwind CSS",
       icon: <SiTailwindcss className="text-blue-400 text-4xl mx-auto" />,
     },
-
     {
       name: "GitHub",
       icon: <FaGithub className="text-gray-900 text-4xl mx-auto" />,
@@ -85,7 +117,23 @@ const Index = () => {
     {
       name: "Java",
       icon: <FaJava className="text-red-500 text-4xl mx-auto" />,
-    }, // Added Java
+    },
+    {
+      name: "MUI",
+      icon: <SiMui className="text-blue-500 text-4xl mx-auto" />,
+    },
+    {
+      name: "Arduino",
+      icon: (
+        <SiArduino style={{ color: "#00979D" }} className="text-4xl mx-auto" />
+      ),
+    },
+    {
+      name: "PowerBI",
+      icon: (
+        <SiPowerbi style={{ color: "#F2C811" }} className="text-4xl mx-auto" />
+      ),
+    },
   ]
 
   return (
@@ -123,11 +171,12 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Skills Section */}
           <div className="mt-20">
-            <h2 className="text-4xl font-bold text-center mb-6">Skills</h2>
+            <h2 className="text-4xl font-bold text-center mb-6">
+              Technical Skills
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {skills.map(skill => (
+              {technicalSkills.map(skill => (
                 <div
                   key={skill.name}
                   className="bg-white p-4 rounded-lg shadow-lg text-center"
@@ -135,6 +184,23 @@ const Index = () => {
                   <div className="text-center mb-2">{skill.icon}</div>
                   <p className="text-xl font-medium text-gray-800">
                     {skill.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <h2 className="text-4xl font-bold text-center mb-6">Tools</h2>
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {tools.map(tool => (
+                <div
+                  key={tool.name}
+                  className="bg-white p-4 rounded-lg shadow-lg text-center"
+                >
+                  <div className="text-center mb-2">{tool.icon}</div>
+                  <p className="text-xl font-medium text-gray-800">
+                    {tool.name}
                   </p>
                 </div>
               ))}
