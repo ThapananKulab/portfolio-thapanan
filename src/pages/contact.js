@@ -5,28 +5,28 @@ import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import Seo from "../components/seo"
 
-const isBrowser = typeof window !== "undefined"
+// const isBrowser = typeof window !== "undefined"
 
-let MapContainer, TileLayer, Marker, Popup
-if (isBrowser) {
-  const {
-    MapContainer: LMapContainer,
-    TileLayer: LTileLayer,
-    Marker: LMarker,
-    Popup: LPopup,
-  } = require("react-leaflet")
-  MapContainer = LMapContainer
-  TileLayer = LTileLayer
-  Marker = LMarker
-  Popup = LPopup
+// let MapContainer, TileLayer, Marker, Popup
+// if (isBrowser) {
+//   const {
+//     MapContainer: LMapContainer,
+//     TileLayer: LTileLayer,
+//     Marker: LMarker,
+//     Popup: LPopup,
+//   } = require("react-leaflet")
+//   MapContainer = LMapContainer
+//   TileLayer = LTileLayer
+//   Marker = LMarker
+//   Popup = LPopup
 
-  require("leaflet/dist/leaflet.css")
-  require("leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css")
-  require("leaflet-defaulticon-compatibility")
-}
+//   require("leaflet/dist/leaflet.css")
+//   require("leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css")
+//   require("leaflet-defaulticon-compatibility")
+// }
 
 const ContactForm = () => {
-  const mapRef = useRef()
+  // const mapRef = useRef()
   const email = "thapanan.kularb@gmail.com"
   const phone = "0819139936"
 
@@ -43,12 +43,12 @@ const ContactForm = () => {
     })
   }
 
-  useEffect(() => {
-    if (isBrowser && mapRef.current) {
-      const mapInstance = mapRef.current
-      mapInstance.invalidateSize()
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (isBrowser && mapRef.current) {
+  //     const mapInstance = mapRef.current
+  //     mapInstance.invalidateSize()
+  //   }
+  // }, [])
 
   return (
     <div>
@@ -104,7 +104,7 @@ const ContactForm = () => {
                 </a>
               </div>
             </div>
-            {isBrowser && (
+            {/* {isBrowser && (
               <div style={{ width: "100%", height: "500px" }}>
                 <MapContainer
                   center={[13.811202, 100.504995]}
@@ -124,7 +124,7 @@ const ContactForm = () => {
                   </Marker>
                 </MapContainer>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>
