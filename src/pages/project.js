@@ -47,6 +47,13 @@ const projectData = [
     img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720687760/portfolio/epd1rgelgincci4akitq.png",
     link: "https://leaflet-search.vercel.app/",
   },
+  {
+    title: "POS Cafe Template",
+    tools: "JavaScript, Css, EJS ",
+    details: "Sale product with POS",
+    github: "https://github.com/ThapananKulab/Cafe-Management-EJS.git",
+    img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720751352/portfolio/bfmqtyagarkmmvr77yyk.png",
+  },
 ]
 const ProjectPage = () => {
   return (
@@ -70,18 +77,22 @@ const ProjectPage = () => {
                   />
                 </div>
                 <div className="flex justify-center space-x-4">
-                  <a href={project.github} target="_blank">
-                    <button className="btn btn-outline btn-dark">
-                      <FaGithub />
-                      Github
-                    </button>
-                  </a>
-                  <a href={project.link} target="_blank">
-                    <button className=" btn btn-primary">
-                      <GrView />
-                      View
-                    </button>
-                  </a>
+                  {project.github && (
+                    <a href={project.github} target="_blank">
+                      <button className="btn btn-outline btn-dark">
+                        <FaGithub />
+                        Github
+                      </button>
+                    </a>
+                  )}
+                  {project.link && (
+                    <a href={project.link} target="_blank">
+                      <button className=" btn btn-primary">
+                        <GrView />
+                        View
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
