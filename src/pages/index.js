@@ -191,7 +191,9 @@ const Index = () => {
           </div>
 
           <div className="mt-20">
-            <h2 className="text-4xl font-bold text-center mb-6">Tools</h2>
+            <h2 className="text-4xl font-bold text-center mb-6">
+              Programming Skills
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {tools.map(tool => (
                 <div
