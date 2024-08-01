@@ -34,7 +34,7 @@ const projectData = [
   {
     title: "App Quiz Sek Loso",
     tools: "NextJS, Mantine",
-    details: "Using Search Movie By OMDB API",
+    details: "App Quiz Sek Loso Song",
     github: "https://github.com/ThapananKulab/SekLoso-Quiz.git",
     img: "https://res.cloudinary.com/dr3ehki5q/image/upload/v1720668463/portfolio/pqp3ugwg2bo7nm6tr8ij.png",
     link: "https://sekloso-quiz-song.netlify.app",
